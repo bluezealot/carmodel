@@ -15,6 +15,11 @@ def run_marker_on_matched_pdfs(scan_folder, file_pattern, output_dir):
         for f in files:
             if re.search(file_pattern, f):
                 pdf_path = os.path.join(root, f)
+                pdf_base = os.path.splitext(f)[0]
+                output_subdir = os.path.join(output_dir, pdf_base)
+                if os.path.exists(output_subdir):
+                    print(f"已存在输出目录，跳过: {output_subdir}")
+                    continue
                 cmd = [
                     'marker_single',
                     pdf_path,
@@ -33,4 +38,3 @@ if __name__ == '__main__':
     parser.add_argument('--output-dir', required=True, help='marker_single输出目录')
     args = parser.parse_args()
     run_marker_on_matched_pdfs(args.scan_folder, args.file_pattern, args.output_dir)
-
