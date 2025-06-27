@@ -28,12 +28,9 @@ def run_marker_on_matched_pdfs(scan_folder, file_pattern, output_dir):
 
 if __name__ == '__main__':
     parser = argparse.ArgumentParser(description='批量处理PDF并运行marker_single命令')
-    parser.add_argument('--scan-folder', required=False, help='待扫描的PDF根目录')
-    parser.add_argument('--file-pattern', required=False, help='PDF文件名正则表达式')
-    parser.add_argument('--output-dir', required=False, help='marker_single输出目录')
+    parser.add_argument('--scan-folder', required=True, help='待扫描的PDF根目录')
+    parser.add_argument('--file-pattern', required=True, help='PDF文件名正则表达式')
+    parser.add_argument('--output-dir', required=True, help='marker_single输出目录')
     args = parser.parse_args()
-    args.scan_folder = '/Volumes/Seagate/work/robot/webcatalog/catalogs'
-    args.file_pattern = '^.+main.+\\.pdf$'
-    args.output_dir = '/Volumes/Seagate/work/robot/webcatalog/output'
     run_marker_on_matched_pdfs(args.scan_folder, args.file_pattern, args.output_dir)
 
