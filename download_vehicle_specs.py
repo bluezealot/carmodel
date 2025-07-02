@@ -133,7 +133,7 @@ def main():
     parser.add_argument('--output-dir', default='downloads', help='保存目录')
     args = parser.parse_args()
 
-    ##args.url = 'https://toyota.jp/request/webcatalog/welcab/'
+    ##args.url = 'https://xxx/request/webcatalog/welcab/'
     ##args.pattern = '^/pages/contents/request/webcatalog/.+\\.pdf$'
     ##args.output_dir = '/Volumes/Seagate/work/robot/webcatalog/catalogs'
     if args.pattern and args.url:
