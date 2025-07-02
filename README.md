@@ -1,8 +1,4 @@
 # carmodel
-Retrieve car models from
-https://toyota.jp/request/webcatalog/
-https://toyota.jp/request/webcatalog/business/
-https://toyota.jp/request/webcatalog/welcab/
 
 这是一套提取特定网站车型说明书信息，并转化为PDF的工具集。
 按照以下顺序执行，可以拿到所有的车型说明书，并且提取Markdown格式的信息。
