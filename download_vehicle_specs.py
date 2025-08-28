@@ -59,6 +59,7 @@ def download_pdf(url, output_dir='downloads'):
                     f.write(chunk)
                     
         print(f"Successfully downloaded: {filepath}")
+        print(f"PDF URL: {url}")
         return filepath
         
     except Exception as e:
@@ -157,5 +158,5 @@ def main():
 
 if __name__ == "__main__":
     '''
-    python download_vehicle_specs.py --url https://xxxx/request/webcatalog/welcab/ --output-dir /home/webcatalog/catalogs'''
+    python download_vehicle_specs.py --url https://toyota.jp/request/webcatalog/ --output-dir /Volumes/Seagate/work/robot/webcatalog/catalogs0728'''
     main()
